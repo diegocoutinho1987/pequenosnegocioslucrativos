@@ -7,13 +7,13 @@
 <meta name="description" content="Criação de sites profissionais para pequenos negócios. Sites modernos, responsivos, com botão de WhatsApp e otimizados para o Google. Solicite um orçamento!">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
 <link rel="icon" href="./img/favicon.ico" type="image/x-icon">
-<script type="text/javascript" src="https://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=65zEBewdMNULV8VkqBPD0oSSO-Gm2VnCKdJQ2c2P2CwyJUS89aD3Pkc3ArNtkyFkqpl3wu4Dk23um_BogUW5bcCwIQ_IszBfreRUWRE-t2I5AIPDivlSEkQuWFmNDcaO2mfQObWm-IpwNw1cbgfxXFmiGoBNcTIfYX0eWCipwuDIJ-j-1OLCiS9cVKsHkRkN4dNGpcItBAA0w8qpXtiQBIjdMjuPc1v7FXerP6W6Lz0" charset="UTF-8"></script><link rel="stylesheet" crossorigin="anonymous" href="https://gc.kis.v2.scr.kaspersky-labs.com/E3E8934C-235A-4B0E-825A-35A08381A191/abn/main.css?attr=aHR0cHM6Ly9zaDAwMjM4Lmhvc3RnYXRvci5jb20uYnI6MjA4My9jcHNlc3M4Mjc2OTM3ODQ4L2Rvd25sb2FkP3NraXBlbmNvZGU9MSZmaWxlPSUyZmhvbWUyJTJmZGllZ292OTAlMmZwZXF1ZW5vc25lZ29jaW9zbHVjcmF0aXZvcy5jb20uYnIlMmZpbmRleC5odG1s"/><style>
+<style>
   :root{
     --indigo:#34538a;
     --indigo-esc:#1D2E4D;
-    --amarelo:#F4B817;
+    --violeta:#F4B817;
     --noite:#0B1020;
     --noite-2:#141A33;
     --lilas:#EEF0FF;
@@ -48,25 +48,40 @@
   .topo{display:flex;align-items:center;justify-content:space-between;height:80px;gap:20px}
   .logo{display:flex;align-items:center;gap:10px;font-family:"Space Grotesk",sans-serif;font-weight:700;font-size:20px;color:#fff;letter-spacing:-.5px}
   .logo-img{height:40px;width:auto;border-radius:10px;object-fit:contain}
-  .logo span{color:var(--amarelo)}
+  .logo span{color:var(--violeta)}
   nav ul{display:flex;gap:30px;list-style:none;font-weight:500;font-size:15px;color:#D5D9EC}
   nav a:hover{color:#fff}
   .topo .btn{padding:12px 20px;font-size:14px}
 
-  .hero{background:radial-gradient(ellipse at 85% 10%,#34538a 0%,var(--noite) 55%);padding:90px 0 110px;overflow:hidden}
-  .hero .grade{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center}
-  .hero .tag{background:rgba(167,139,250,.15);color: white}
-  .hero h1,.hero .titulo{display:block;color:#fff;font-size:clamp(40px,5.2vw,72px)}
-  .hero .titulo.destaque{color:var(--amarelo)}
-  .hero p{color:var(--texto-claro);font-size:19px;max-width:520px;margin:24px 0 34px}
-  .hero-botoes{display:flex;flex-wrap:wrap;gap:14px}
-  .checks{display:flex;flex-wrap:wrap;gap:10px 22px;margin-top:30px;color:#D5D9EC;font-weight:500;font-size:15px}
+  /* HERO DESKTOP: 100vh proporcional */
+  .hero{
+    background:radial-gradient(ellipse at 85% 10%,#34538a 0%,var(--noite) 55%);
+    min-height: calc(100vh - 80px);
+    display: flex;
+    align-items: center;
+    padding: 40px 0;
+    overflow: hidden;
+  }
+  .hero .container.grade{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:40px;
+    align-items:center;
+    width: min(1180px, 100% - 32px);
+    margin-inline: auto;
+  }
+  .hero .tag{background:rgba(167,139,250,.15);color:var(--violeta);margin-bottom:14px}
+  .hero h1,.hero .titulo{display:block;color:#fff;font-size:clamp(36px,4.5vw,64px)}
+  .hero .titulo.destaque{color:var(--violeta)}
+  .hero p{color:var(--texto-claro);font-size:17px;max-width:520px;margin:16px 0 24px}
+  .hero-botoes{display:flex;flex-wrap:wrap;gap:12px}
+  .checks{display:flex;flex-wrap:wrap;gap:8px 20px;margin-top:24px;color:#D5D9EC;font-weight:500;font-size:14px}
   .checks span::before{content:"✓  ";color:var(--wpp);font-weight:700}
   
-  .vitrine{position:relative;min-height:440px}
-  .vitrine img{position:absolute;border-radius:14px;box-shadow:0 30px 70px rgba(0,0,0,.5);border:1px solid rgba(255,255,255,.1);object-fit:cover}
-  .vitrine .v1{width:88%;right:0;top:0;transform:rotate(2deg)}
-  .vitrine .v2{width:70%;left:0;bottom:0;transform:rotate(-3deg)}
+  .vitrine{position:relative;height:380px;width:100%}
+  .vitrine img{position:absolute;border-radius:14px;box-shadow:0 25px 50px rgba(0,0,0,.5);border:1px solid rgba(255,255,255,.1);object-fit:cover}
+  .vitrine .v1{width:84%;right:0;top:0;transform:rotate(2deg)}
+  .vitrine .v2{width:68%;left:0;bottom:0;transform:rotate(-3deg)}
 
   .nichos{background:var(--noite-2);padding:28px 0}
   .nichos ul{list-style:none;display:flex;flex-wrap:wrap;justify-content:center;gap:10px 34px;color:#D5D9EC;font-weight:600;font-size:15px}
@@ -115,7 +130,7 @@
 
   .cta{background:radial-gradient(ellipse at 50% 0%,#34538a 0%,var(--noite) 70%);text-align:center}
   .cta h2{color:#fff;font-size:clamp(34px,4.8vw,64px);max-width:860px;margin:0 auto}
-  .cta .titulo{color:var(--branco);font-size:clamp(34px,4.8vw,64px);margin-bottom:20px}
+  .cta .titulo{color:var(--violeta);font-size:clamp(34px,4.8vw,64px);margin-bottom:20px}
   .cta p{color:var(--texto-claro);font-size:19px;max-width:580px;margin:0 auto 36px}
   .cta .btn{font-size:18px;padding:20px 36px}
 
@@ -134,7 +149,8 @@
 
   @media (max-width:960px){
     nav{display:none}
-    .hero .grade{grid-template-columns:1fr;gap:50px}
+    .hero{min-height:auto;padding:60px 0}
+    .hero .grade{grid-template-columns:1fr;gap:40px}
     .vitrine{min-height:340px;max-width:560px;margin:10px auto 0}
     .grade-inc,.grade-depo{grid-template-columns:1fr 1fr}
     .grade-passos{grid-template-columns:1fr 1fr}
@@ -143,8 +159,11 @@
   @media (max-width:640px){
     section{padding:60px 0}
     .topo .btn{display:none}
-    .hero{padding:48px 0 64px}
-    .hero h1, .hero .titulo{font-size:32px;letter-spacing:-0.5px}
+    
+    /* MOBILE: Mantém exatamente o layout original antigo */
+    .hero{min-height:auto;padding:48px 0 64px}
+    .hero .tag{margin-bottom:18px}
+    .hero h1, .hero .titulo{font-size:36px;letter-spacing:-0.5px}
     .hero p{font-size:16px;margin:16px 0 24px}
     .hero-botoes{flex-direction:column;width:100%}
     .hero-botoes .btn{width:100%;justify-content:center}
@@ -167,7 +186,7 @@
 <header>
   <div class="container topo">
     <a href="#" class="logo">
-      <img src="./img/pequenos-negocios-lucrativos-perfil.png" alt="Pequenos Negócios Lucrativos" class="logo-img">
+      <img src="./img/pequenos-negocios-lucrativos-perfil.png" alt="Pequenos Negócios Lucrativos" class="logo-img" width="40" height="40" fetchpriority="high">
       Pequenos<span>Negócios</span>Lucrativos
     </a>
     <nav>
@@ -186,7 +205,8 @@
   <div class="container grade">
     <div>
       <span class="tag">Criação de sites profissionais</span>
-      <span class="titulo destaque">Tenha um site que vende online 24h</span>
+      <h1>Seu negócio com um</h1>
+      <div class="titulo destaque">site que vende.</div>
       <p>Criamos sites modernos, rápidos e prontos para celular, com botão de WhatsApp para seus clientes chamarem você na hora.</p>
       <div class="hero-botoes">
         <a href="#orcamento" class="btn btn-wpp"><svg viewBox="0 0 24 24"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.4-.5c.2-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5 2.5 1 3 .8 3.6.8.6-.1 1.8-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.2-.3-.3-.6-.4zM12 21.8c-1.8 0-3.5-.5-5-1.4l-.4-.2-3.7 1 1-3.6-.2-.4A9.8 9.8 0 1 1 12 21.8zM12 0a12 12 0 0 0-10.3 18L0 24l6.2-1.6A12 12 0 1 0 12 0z"/></svg>Solicitar orçamento</a>
@@ -195,8 +215,8 @@
       <div class="checks"><span>Pronto para celular</span><span>Botão de WhatsApp</span><span>Fácil de editar</span></div>
     </div>
     <div class="vitrine">
-      <img class="v1" src="https://pequenosnegocioslucrativos.com.br/img/01-borracharia.jpg" alt="Site de borracharia">
-      <img class="v2" src="https://pequenosnegocioslucrativos.com.br/img/08-academia.jpg" alt="Site de academia">
+      <img class="v1" src="https://pequenosnegocioslucrativos.com.br/img/01-borracharia.jpg" alt="Site de borracharia" fetchpriority="high" decoding="async">
+      <img class="v2" src="https://pequenosnegocioslucrativos.com.br/img/08-academia.jpg" alt="Site de academia" loading="lazy" decoding="async">
     </div>
   </div>
 </section>
@@ -233,16 +253,16 @@
       <p>Cada projeto com identidade própria, pensado para o público de cada negócio.</p>
     </div>
     <div class="grade-port">
-      <a href="#orcamento" class="projeto"><img src="https://pequenosnegocioslucrativos.com.br/img/01-borracharia.jpg" alt="Borracharia Rodão"><div class="projeto-info"><div><h3>Borracharia Rodão</h3><span class="nicho">Borracharia e auto center</span></div><span class="seta">→</span></div></a>
-      <a href="https://eliviateles.com.br/" class="projeto" target="_blank"><img src="https://pequenosnegocioslucrativos.com.br/img/01-fisioterapeuta.png" alt="Fisioterapeuta Elívia Teles"><div class="projeto-info"><div><h3>Fisioterapia Obstétrica</h3><span class="nicho">Fisioterapia</span></div><span class="seta">→</span></div></a>
-      <a href="https://topfones.com.br/" class="projeto" target="_blank"><img src="https://pequenosnegocioslucrativos.com.br/img/02-site-de-review.jpg" alt="Top Fones"><div class="projeto-info"><div><h3>Top Fones</h3><span class="nicho">Reviews</span></div><span class="seta">→</span></div></a>
-      <a href="#orcamento" class="projeto"><img src="https://pequenosnegocioslucrativos.com.br/img/04-barbearia.jpg" alt="Dom Bigode"><div class="projeto-info"><div><h3>Dom Bigode</h3><span class="nicho">Barbearia</span></div><span class="seta">→</span></div></a>
-      <a href="#orcamento" class="projeto"><img src="https://pequenosnegocioslucrativos.com.br/img/05-salao.jpg" alt="Studio Aurora"><div class="projeto-info"><div><h3>Studio Aurora</h3><span class="nicho">Salão de beleza e estética</span></div><span class="seta">→</span></div></a>
-      <a href="#orcamento" class="projeto"><img src="https://pequenosnegocioslucrativos.com.br/img/06-restaurante.jpg" alt="Sabor da Vila"><div class="projeto-info"><div><h3>Sabor da Vila</h3><span class="nicho">Restaurante</span></div><span class="seta">→</span></div></a>
-      <a href="#orcamento" class="projeto"><img src="https://pequenosnegocioslucrativos.com.br/img/07-clinica.jpg" alt="Clínica Vida Plena"><div class="projeto-info"><div><h3>Clínica Vida Plena</h3><span class="nicho">Clínica médica</span></div><span class="seta">→</span></div></a>
-      <a href="#orcamento" class="projeto"><img src="https://pequenosnegocioslucrativos.com.br/img/08-academia.jpg" alt="Academia Força Total"><div class="projeto-info"><div><h3>Academia Força Total</h3><span class="nicho">Academia</span></div><span class="seta">→</span></div></a>
-      <a href="#orcamento" class="projeto"><img src="https://pequenosnegocioslucrativos.com.br/img/09-advocacia.jpg" alt="Andrade & Moraes"><div class="projeto-info"><div><h3>Andrade & Moraes</h3><span class="nicho">Escritório de advocacia</span></div><span class="seta">→</span></div></a>
-      <a href="#orcamento" class="projeto"><img src="https://pequenosnegocioslucrativos.com.br/img/10-petshop.jpg" alt="Patas & Cia"><div class="projeto-info"><div><h3>Patas & Cia</h3><span class="nicho">Pet shop e veterinária</span></div><span class="seta">→</span></div></a>
+      <a href="#orcamento" class="projeto"><img src="https://pequenosnegocioslucrativos.com.br/img/01-borracharia.jpg" alt="Borracharia Rodão" loading="lazy" decoding="async"><div class="projeto-info"><div><h3>Borracharia Rodão</h3><span class="nicho">Borracharia e auto center</span></div><span class="seta">→</span></div></a>
+      <a href="https://eliviateles.com.br/" class="projeto" target="_blank"><img src="https://pequenosnegocioslucrativos.com.br/img/01-fisioterapeuta.png" alt="Fisioterapeuta Elívia Teles" loading="lazy" decoding="async"><div class="projeto-info"><div><h3>Fisioterapia Obstétrica</h3><span class="nicho">Fisioterapia</span></div><span class="seta">→</span></div></a>
+      <a href="https://topfones.com.br/" class="projeto" target="_blank"><img src="https://pequenosnegocioslucrativos.com.br/img/02-site-de-review.jpg" alt="Top Fones" loading="lazy" decoding="async"><div class="projeto-info"><div><h3>Top Fones</h3><span class="nicho">Reviews</span></div><span class="seta">→</span></div></a>
+      <a href="#orcamento" class="projeto"><img src="https://pequenosnegocioslucrativos.com.br/img/04-barbearia.jpg" alt="Dom Bigode" loading="lazy" decoding="async"><div class="projeto-info"><div><h3>Dom Bigode</h3><span class="nicho">Barbearia</span></div><span class="seta">→</span></div></a>
+      <a href="#orcamento" class="projeto"><img src="https://pequenosnegocioslucrativos.com.br/img/05-salao.jpg" alt="Studio Aurora" loading="lazy" decoding="async"><div class="projeto-info"><div><h3>Studio Aurora</h3><span class="nicho">Salão de beleza e estética</span></div><span class="seta">→</span></div></a>
+      <a href="#orcamento" class="projeto"><img src="https://pequenosnegocioslucrativos.com.br/img/06-restaurante.jpg" alt="Sabor da Vila" loading="lazy" decoding="async"><div class="projeto-info"><div><h3>Sabor da Vila</h3><span class="nicho">Restaurante</span></div><span class="seta">→</span></div></a>
+      <a href="#orcamento" class="projeto"><img src="https://pequenosnegocioslucrativos.com.br/img/07-clinica.jpg" alt="Clínica Vida Plena" loading="lazy" decoding="async"><div class="projeto-info"><div><h3>Clínica Vida Plena</h3><span class="nicho">Clínica médica</span></div><span class="seta">→</span></div></a>
+      <a href="#orcamento" class="projeto"><img src="https://pequenosnegocioslucrativos.com.br/img/08-academia.jpg" alt="Academia Força Total" loading="lazy" decoding="async"><div class="projeto-info"><div><h3>Academia Força Total</h3><span class="nicho">Academia</span></div><span class="seta">→</span></div></a>
+      <a href="#orcamento" class="projeto"><img src="https://pequenosnegocioslucrativos.com.br/img/09-advocacia.jpg" alt="Andrade & Moraes" loading="lazy" decoding="async"><div class="projeto-info"><div><h3>Andrade & Moraes</h3><span class="nicho">Escritório de advocacia</span></div><span class="seta">→</span></div></a>
+      <a href="#orcamento" class="projeto"><img src="https://pequenosnegocioslucrativos.com.br/img/10-petshop.jpg" alt="Patas & Cia" loading="lazy" decoding="async"><div class="projeto-info"><div><h3>Patas & Cia</h3><span class="nicho">Pet shop e veterinária</span></div><span class="seta">→</span></div></a>
     </div>
     <div class="centro">
       <p>Gostou de algum estilo? A gente cria o seu do zero, com a cara do seu negócio.</p>
@@ -310,17 +330,17 @@
   <div class="container">
     <div class="rodape">
       <div>
-        <a href="https://pequenosnegocioslucrativos.com.br/" class="logo">
-          <img src="./img/pequenos-negocios-lucrativos-perfil.png" alt="Pequenos Negócios Lucrativos" class="logo-img">
+        <a href="#" class="logo">
+          <img src="./img/pequenos-negocios-lucrativos-perfil.png" alt="Pequenos Negócios Lucrativos" class="logo-img" width="40" height="40" loading="lazy">
           Pequenos<span>Negócios</span>Lucrativos
         </a>
         <p style="margin-top:16px">Criação de sites profissionais para pequenos negócios.</p>
         <div class="sociais">
-          <a href="https://www.instagram.com/diegocoutinho1987/" aria-label="Instagram"><svg viewBox="0 0 24 24"><path d="M12 2.2c3.2 0 3.6 0 4.8.1 3.3.1 4.8 1.7 4.9 4.9.1 1.3.1 1.6.1 4.8s0 3.6-.1 4.8c-.1 3.2-1.7 4.8-4.9 4.9-1.3.1-1.6.1-4.8.1s-3.6 0-4.8-.1c-3.3-.1-4.8-1.7-4.9-4.9C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.8C2.4 3.9 3.9 2.4 7.2 2.3 8.4 2.2 8.8 2.2 12 2.2zM12 7a5 5 0 1 0 0 10 5 5 0 0 0 0-10zm0 8.2a3.2 3.2 0 1 1 0-6.4 3.2 3.2 0 0 1 0 6.4zm5.2-9.6a1.2 1.2 0 1 0 0 2.4 1.2 1.2 0 0 0 0-2.4z"/></svg></a>
-          <a href="https://www.linkedin.com/in/diego-vieira-coutinho/" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M20.4 20.5h-3.6v-5.6c0-1.3 0-3-1.8-3s-2.1 1.4-2.1 2.9v5.7H9.4V9h3.4v1.6c.5-.9 1.6-1.8 3.4-1.8 3.6 0 4.3 2.4 4.3 5.5zM5.3 7.4a2.1 2.1 0 1 1 0-4.2 2.1 2.1 0 0 1 0 4.2zM7.1 20.5H3.6V9h3.5zM22.2 0H1.8C.8 0 0 .8 0 1.7v20.6c0 .9.8 1.7 1.8 1.7h20.4c1 0 1.8-.8 1.8-1.7V1.7C24 .8 23.2 0 22.2 0z"/></svg></a>
+          <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24"><path d="M12 2.2c3.2 0 3.6 0 4.8.1 3.3.1 4.8 1.7 4.9 4.9.1 1.3.1 1.6.1 4.8s0 3.6-.1 4.8c-.1 3.2-1.7 4.8-4.9 4.9-1.3.1-1.6.1-4.8.1s-3.6 0-4.8-.1c-3.3-.1-4.8-1.7-4.9-4.9C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.8C2.4 3.9 3.9 2.4 7.2 2.3 8.4 2.2 8.8 2.2 12 2.2zM12 7a5 5 0 1 0 0 10 5 5 0 0 0 0-10zm0 8.2a3.2 3.2 0 1 1 0-6.4 3.2 3.2 0 0 1 0 6.4zm5.2-9.6a1.2 1.2 0 1 0 0 2.4 1.2 1.2 0 0 0 0-2.4z"/></svg></a>
+          <a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M20.4 20.5h-3.6v-5.6c0-1.3 0-3-1.8-3s-2.1 1.4-2.1 2.9v5.7H9.4V9h3.4v1.6c.5-.9 1.6-1.8 3.4-1.8 3.6 0 4.3 2.4 4.3 5.5zM5.3 7.4a2.1 2.1 0 1 1 0-4.2 2.1 2.1 0 0 1 0 4.2zM7.1 20.5H3.6V9h3.5zM22.2 0H1.8C.8 0 0 .8 0 1.7v20.6c0 .9.8 1.7 1.8 1.7h20.4c1 0 1.8-.8 1.8-1.7V1.7C24 .8 23.2 0 22.2 0z"/></svg></a>
         </div>
       </div>
-      <div><h4>Navegação</h4><ul><li><a href="#servicos">O que está incluso</a></li><li><a href="#portfolio">Portfólio</a></li><li><a href="#como-funciona">Como funciona</a></li><li><a href="#faq">Dúvidas</a></li></ul></div>
+      <div><h4>Navegação</h4><ul><li><a href="#servicos">O que está incluso</a></li><li><a href="#portfolio">Portfólio</a></li><li><a href="#como-funciona">Cómo funciona</a></li><li><a href="#faq">Dúvidas</a></li></ul></div>
       <div><h4>Contato</h4><ul><li>(86) 99970-4740</li><li>diegocoutinho1987@gmail.com.br</li><li>Atendimento em todo o Brasil</li></ul></div>
     </div>
     <div class="copy">© 2026 Pequenos Negócios Lucrativos.<br>Todos os direitos reservados.</div>
