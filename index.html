@@ -147,35 +147,48 @@
   .wpp-flutuante{position:fixed;right:22px;bottom:22px;width:62px;height:62px;border-radius:50%;background:var(--wpp);display:grid;place-items:center;box-shadow:0 10px 30px rgba(0,0,0,.3);z-index:60}
   .wpp-flutuante svg{width:32px;height:32px;fill:#fff}
 
+  /* MEDIA QUERIES ORDENADAS CORRETAMENTE */
   @media (max-width:960px){
     nav{display:none}
-    .hero{min-height:auto;padding:60px 0}
-    .hero .grade{grid-template-columns:1fr;gap:50px}
-    .vitrine{min-height:340px;max-width:560px;margin:10px auto 0}
-    .grade-inc,.grade-depo{grid-template-columns:1fr 1fr}
-    .grade-passos{grid-template-columns:1fr 1fr}
+    .grade-inc,.grade-depo,.grade-passos{grid-template-columns:1fr 1fr}
     .rodape{grid-template-columns:1fr 1fr}
   }
-  @media (max-width:640px){
-    section{padding:60px 0}
+
+  @media (max-width:768px){
+    section{padding:50px 0}
     .topo .btn{display:none}
     
-    /* REVERTIDO TOTALMENTE PARA O MOBILE ORIGINAL */
-    .hero{min-height:auto;padding:48px 0 64px}
-    .hero .tag{margin-bottom:18px}
-    .hero h1, .hero .titulo{font-size:36px;letter-spacing:-0.5px}
-    .hero p{font-size:16px;margin:16px 0 24px}
-    .hero-botoes{flex-direction:column;width:100%}
-    .hero-botoes .btn{width:100%;justify-content:center}
+    /* CORREÇÃO DO HERO NO MOBILE */
+    .hero{
+      min-height: auto !important;
+      padding: 40px 0 60px !important;
+      display: block !important;
+    }
+    .hero .container.grade{
+      display: flex !important;
+      flex-direction: column !important;
+      gap: 30px !important;
+      width: 100% !important;
+    }
+    .hero h1, .hero .titulo{font-size:32px !important; letter-spacing:-0.5px}
+    .hero p{font-size:15px; margin:14px 0 20px}
+    .hero-botoes{flex-direction:column; width:100%}
+    .hero-botoes .btn{width:100%; justify-content:center}
     
-    .hero .grade{display:flex;flex-direction:column;}
-    .vitrine{order:3; min-height:260px; width:100%; margin-top:40px; display:block;}
-    .vitrine .v1{width:82%; right:0; top:0;}
-    .vitrine .v2{width:68%; left:0; bottom:0;}
+    /* VITRINE COMPLETAMENTE ABAIXO DOS BOTÕES */
+    .vitrine{
+      position: relative !important;
+      display: block !important;
+      width: 100% !important;
+      height: 260px !important;
+      margin-top: 20px !important;
+    }
+    .vitrine .v1{width:80% !important; right:0 !important; top:0 !important;}
+    .vitrine .v2{width:65% !important; left:0 !important; bottom:0 !important;}
 
     .grade-inc,.grade-depo,.grade-passos,.grade-port,.rodape{grid-template-columns:1fr}
-    .titulo-secao h2{font-size:30px}
-    .cta h2, .cta .titulo{font-size:32px}
+    .titulo-secao h2{font-size:28px}
+    .cta h2, .cta .titulo{font-size:30px}
     .wpp-flutuante{width:54px;height:54px;right:16px;bottom:16px}
     .wpp-flutuante svg{width:28px;height:28px}
   }
