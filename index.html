@@ -158,7 +158,7 @@
     section{padding:50px 0}
     .topo .btn{display:none}
     
-    /* CORREÇÃO DO HERO NO MOBILE */
+    /* CORREÇÃO E CENTRALIZAÇÃO DO HERO NO MOBILE */
     .hero{
       min-height: auto !important;
       padding: 40px 0 60px !important;
@@ -169,15 +169,33 @@
       flex-direction: column !important;
       gap: 30px !important;
       width: 100% !important;
+      align-items: center !important;
+      text-align: center !important;
+    }
+    .hero .tag{
+      margin-inline: auto !important;
     }
     .hero h1, .hero .titulo{
       font-size:32px !important; 
       letter-spacing:-0.5px;
       text-align: center !important;
     }
-    .hero p{font-size:15px; margin:14px 0 20px}
-    .hero-botoes{flex-direction:column; width:100%}
+    .hero p{
+      font-size:15px; 
+      margin:14px auto 20px !important;
+      text-align: center !important;
+    }
+    .hero-botoes{
+      flex-direction:column; 
+      width:100%;
+      align-items: center !important;
+    }
     .hero-botoes .btn{width:100%; justify-content:center}
+    
+    .checks{
+      justify-content: center !important;
+      text-align: center !important;
+    }
     
     /* VITRINE COMPLETAMENTE ABAIXO DOS BOTÕES */
     .vitrine{
