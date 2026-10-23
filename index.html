@@ -32,9 +32,8 @@
     --texto:#5B6178;
     --texto-claro:#A5ABC6;
     --linha:#E4E7F5;
-    /* CONTRASTE AJUSTADO PARA O WPP (APROVADO NO PAGESPEED) */
-    --wpp:#128C3E;
-    --wpp-esc:#0C5C28;
+    --wpp:#25D366;
+    --wpp-esc:#1EBE5A;
   }
   *{box-sizing:border-box;margin:0;padding:0}
   html{scroll-behavior:smooth}
@@ -45,9 +44,12 @@
   h1,h2,h3,.titulo{font-family:"Space Grotesk",sans-serif;font-weight:700;color:var(--noite);line-height:1.08;letter-spacing:-1px}
   .tag{display:inline-block;font-weight:700;font-size:13px;letter-spacing:1px;text-transform:uppercase;color:var(--indigo);background:var(--lilas);padding:7px 14px;border-radius:999px;margin-bottom:18px}
   .btn{display:inline-flex;align-items:center;gap:10px;padding:17px 30px;border-radius:12px;font-weight:700;font-size:16px;transition:.2s}
-  .btn-wpp{background:var(--wpp);color:#fff}
+  
+  /* BOTÃO WPP COM TEXTO EM BRANCO PURO E ANTIALIAS PARA CONTRASTE PERFEITO */
+  .btn-wpp{background:var(--wpp);color:#FFFFFF;font-weight:700;-webkit-font-smoothing:antialiased}
   .btn-wpp:hover{background:var(--wpp-esc)}
-  .btn-wpp svg{width:22px;height:22px;fill:#fff}
+  .btn-wpp svg{width:22px;height:22px;fill:#FFFFFF}
+
   .btn-contorno{border:1.5px solid rgba(255,255,255,.35);color:#fff}
   .btn-contorno:hover{background:#fff;color:var(--noite)}
   .btn-indigo{background:var(--indigo);color:#fff}
@@ -157,7 +159,7 @@
   .sociais svg{width:17px;height:17px;fill:#fff}
   .copy{border-top:1px solid rgba(255,255,255,.08);padding-top:24px;text-align:center;font-size:12px}
   .wpp-flutuante{position:fixed;right:22px;bottom:22px;width:62px;height:62px;border-radius:50%;background:var(--wpp);display:grid;place-items:center;box-shadow:0 10px 30px rgba(0,0,0,.3);z-index:60}
-  .wpp-flutuante svg{width:32px;height:32px;fill:#fff}
+  .wpp-flutuante svg{width:32px;height:32px;fill:#FFFFFF}
 
   /* MEDIA QUERIES */
   @media (max-width:960px){
