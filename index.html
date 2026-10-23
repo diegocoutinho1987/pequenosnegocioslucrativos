@@ -6,7 +6,7 @@
 <title>Pequenos Negócios Lucrativos | Criação de Sites Profissionais</title>
 <meta name="description" content="Criação de sites profissionais para pequenos negócios. Sites modernos, responsivos, com botão de WhatsApp e otimizados para o Google. Solicite um orçamento!">
 
-<!-- PRÉ-CONEXÃO E PRÉ-CARREGAMENTO DA IMAGEM DO LCP PARA DESCOBERTA IMEDIATA -->
+<!-- PRÉ-CARREGAMENTO DA IMAGEM DO LCP -->
 <link rel="preload" as="image" href="https://pequenosnegocioslucrativos.com.br/img/01-borracharia.jpg" fetchpriority="high">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -37,7 +37,7 @@
   *{box-sizing:border-box;margin:0;padding:0}
   html{scroll-behavior:smooth}
   body{font-family:Inter,system-ui,sans-serif;background:#fff;color:var(--texto);line-height:1.7}
-  img{max-width:100%;display:block}
+  img{max-width:100%;height:auto;display:block}
   a{color:inherit;text-decoration:none}
   .container{width:min(1180px,100% - 32px);margin-inline:auto}
   h1,h2,h3,.titulo{font-family:"Space Grotesk",sans-serif;font-weight:700;color:var(--noite);line-height:1.08;letter-spacing:-1px}
@@ -57,7 +57,7 @@
   header{position:sticky;top:0;z-index:50;background:rgba(11,16,32,.92);backdrop-filter:blur(10px);border-bottom:1px solid rgba(255,255,255,.08)}
   .topo{display:flex;align-items:center;justify-content:space-between;height:80px;gap:20px}
   .logo{display:flex;align-items:center;gap:10px;font-family:"Space Grotesk",sans-serif;font-weight:700;font-size:20px;color:#fff;letter-spacing:-.5px}
-  .logo-img{height:40px;width:auto;border-radius:10px;object-fit:contain}
+  .logo-img{height:40px;width:40px;border-radius:10px;object-fit:contain}
   .logo span{color:var(--violeta)}
   nav ul{display:flex;gap:30px;list-style:none;font-weight:500;font-size:15px;color:#D5D9EC}
   nav a:hover{color:#fff}
@@ -258,9 +258,9 @@
       <div class="checks"><span>Pronto para celular</span><span>Botão de WhatsApp</span><span>Fácil de editar</span></div>
     </div>
     <div class="vitrine">
-      <!-- IMAGEM DO LCP: Sem loading="lazy", com fetchpriority="high" e pré-carregada no head -->
-      <img class="v1" src="https://pequenosnegocioslucrativos.com.br/img/01-borracharia.jpg" alt="Site de borracharia" fetchpriority="high" decoding="async">
-      <img class="v2" src="https://pequenosnegocioslucrativos.com.br/img/08-academia.jpg" alt="Site de academia" loading="lazy" decoding="async">
+      <!-- IMAGEM LCP COM DIMENSÕES DECLARADAS -->
+      <img class="v1" src="https://pequenosnegocioslucrativos.com.br/img/01-borracharia.jpg" alt="Site de borracharia" width="606" height="420" fetchpriority="high" decoding="async">
+      <img class="v2" src="https://pequenosnegocioslucrativos.com.br/img/08-academia.jpg" alt="Site de academia" width="606" height="420" loading="lazy" decoding="async">
     </div>
   </div>
 </section>
@@ -297,16 +297,16 @@
       <p>Cada projeto com identidade própria, pensado para o público de cada negócio.</p>
     </div>
     <div class="grade-port">
-      <a href="#orcamento" class="projeto"><img src="https://pequenosnegocioslucrativos.com.br/img/01-borracharia.jpg" alt="Borracharia Rodão" loading="lazy" decoding="async"><div class="projeto-info"><div><h3>Borracharia Rodão</h3><span class="nicho">Borracharia e auto center</span></div><span class="seta">→</span></div></a>
-      <a href="https://eliviateles.com.br/" class="projeto" target="_blank"><img src="https://pequenosnegocioslucrativos.com.br/img/01-fisioterapeuta.png" alt="Fisioterapeuta Elívia Teles" loading="lazy" decoding="async"><div class="projeto-info"><div><h3>Fisioterapia Obstétrica</h3><span class="nicho">Fisioterapia</span></div><span class="seta">→</span></div></a>
-      <a href="https://topfones.com.br/" class="projeto" target="_blank"><img src="https://pequenosnegocioslucrativos.com.br/img/02-site-de-review.jpg" alt="Top Fones" loading="lazy" decoding="async"><div class="projeto-info"><div><h3>Top Fones</h3><span class="nicho">Reviews</span></div><span class="seta">→</span></div></a>
-      <a href="#orcamento" class="projeto"><img src="https://pequenosnegocioslucrativos.com.br/img/04-barbearia.jpg" alt="Dom Bigode" loading="lazy" decoding="async"><div class="projeto-info"><div><h3>Dom Bigode</h3><span class="nicho">Barbearia</span></div><span class="seta">→</span></div></a>
-      <a href="#orcamento" class="projeto"><img src="https://pequenosnegocioslucrativos.com.br/img/05-salao.jpg" alt="Studio Aurora" loading="lazy" decoding="async"><div class="projeto-info"><div><h3>Studio Aurora</h3><span class="nicho">Salão de beleza e estética</span></div><span class="seta">→</span></div></a>
-      <a href="#orcamento" class="projeto"><img src="https://pequenosnegocioslucrativos.com.br/img/06-restaurante.jpg" alt="Sabor da Vila" loading="lazy" decoding="async"><div class="projeto-info"><div><h3>Sabor da Vila</h3><span class="nicho">Restaurante</span></div><span class="seta">→</span></div></a>
-      <a href="#orcamento" class="projeto"><img src="https://pequenosnegocioslucrativos.com.br/img/07-clinica.jpg" alt="Clínica Vida Plena" loading="lazy" decoding="async"><div class="projeto-info"><div><h3>Clínica Vida Plena</h3><span class="nicho">Clínica médica</span></div><span class="seta">→</span></div></a>
-      <a href="#orcamento" class="projeto"><img src="https://pequenosnegocioslucrativos.com.br/img/08-academia.jpg" alt="Academia Força Total" loading="lazy" decoding="async"><div class="projeto-info"><div><h3>Academia Força Total</h3><span class="nicho">Academia</span></div><span class="seta">→</span></div></a>
-      <a href="#orcamento" class="projeto"><img src="https://pequenosnegocioslucrativos.com.br/img/09-advocacia.jpg" alt="Andrade & Moraes" loading="lazy" decoding="async"><div class="projeto-info"><div><h3>Andrade & Moraes</h3><span class="nicho">Escritório de advocacia</span></div><span class="seta">→</span></div></a>
-      <a href="#orcamento" class="projeto"><img src="https://pequenosnegocioslucrativos.com.br/img/10-petshop.jpg" alt="Patas & Cia" loading="lazy" decoding="async"><div class="projeto-info"><div><h3>Patas & Cia</h3><span class="nicho">Pet shop e veterinária</span></div><span class="seta">→</span></div></a>
+      <a href="#orcamento" class="projeto"><img src="https://pequenosnegocioslucrativos.com.br/img/01-borracharia.jpg" alt="Borracharia Rodão" width="606" height="420" loading="lazy" decoding="async"><div class="projeto-info"><div><h3>Borracharia Rodão</h3><span class="nicho">Borracharia e auto center</span></div><span class="seta">→</span></div></a>
+      <a href="https://eliviateles.com.br/" class="projeto" target="_blank"><img src="https://pequenosnegocioslucrativos.com.br/img/01-fisioterapeuta.png" alt="Fisioterapeuta Elívia Teles" width="606" height="420" loading="lazy" decoding="async"><div class="projeto-info"><div><h3>Fisioterapia Obstétrica</h3><span class="nicho">Fisioterapia</span></div><span class="seta">→</span></div></a>
+      <a href="https://topfones.com.br/" class="projeto" target="_blank"><img src="https://pequenosnegocioslucrativos.com.br/img/02-site-de-review.jpg" alt="Top Fones" width="606" height="420" loading="lazy" decoding="async"><div class="projeto-info"><div><h3>Top Fones</h3><span class="nicho">Reviews</span></div><span class="seta">→</span></div></a>
+      <a href="#orcamento" class="projeto"><img src="https://pequenosnegocioslucrativos.com.br/img/04-barbearia.jpg" alt="Dom Bigode" width="606" height="420" loading="lazy" decoding="async"><div class="projeto-info"><div><h3>Dom Bigode</h3><span class="nicho">Barbearia</span></div><span class="seta">→</span></div></a>
+      <a href="#orcamento" class="projeto"><img src="https://pequenosnegocioslucrativos.com.br/img/05-salao.jpg" alt="Studio Aurora" width="606" height="420" loading="lazy" decoding="async"><div class="projeto-info"><div><h3>Studio Aurora</h3><span class="nicho">Salão de beleza e estética</span></div><span class="seta">→</span></div></a>
+      <a href="#orcamento" class="projeto"><img src="https://pequenosnegocioslucrativos.com.br/img/06-restaurante.jpg" alt="Sabor da Vila" width="606" height="420" loading="lazy" decoding="async"><div class="projeto-info"><div><h3>Sabor da Vila</h3><span class="nicho">Restaurante</span></div><span class="seta">→</span></div></a>
+      <a href="#orcamento" class="projeto"><img src="https://pequenosnegocioslucrativos.com.br/img/07-clinica.jpg" alt="Clínica Vida Plena" width="606" height="420" loading="lazy" decoding="async"><div class="projeto-info"><div><h3>Clínica Vida Plena</h3><span class="nicho">Clínica médica</span></div><span class="seta">→</span></div></a>
+      <a href="#orcamento" class="projeto"><img src="https://pequenosnegocioslucrativos.com.br/img/08-academia.jpg" alt="Academia Força Total" width="606" height="420" loading="lazy" decoding="async"><div class="projeto-info"><div><h3>Academia Força Total</h3><span class="nicho">Academia</span></div><span class="seta">→</span></div></a>
+      <a href="#orcamento" class="projeto"><img src="https://pequenosnegocioslucrativos.com.br/img/09-advocacia.jpg" alt="Andrade & Moraes" width="606" height="420" loading="lazy" decoding="async"><div class="projeto-info"><div><h3>Andrade & Moraes</h3><span class="nicho">Escritório de advocacia</span></div><span class="seta">→</span></div></a>
+      <a href="#orcamento" class="projeto"><img src="https://pequenosnegocioslucrativos.com.br/img/10-petshop.jpg" alt="Patas & Cia" width="606" height="420" loading="lazy" decoding="async"><div class="projeto-info"><div><h3>Patas & Cia</h3><span class="nicho">Pet shop e veterinária</span></div><span class="seta">→</span></div></a>
     </div>
     <div class="centro">
       <p>Gostou de algum estilo? A gente cria o seu do zero, com a cara do seu negócio.</p>
